@@ -1,0 +1,25 @@
+using System;
+using consoleT_6;
+ 
+namespace consoleT_6_4
+{
+   class Program
+   {
+       static void Main(string[] args)
+       {
+           try
+           {
+               Console.WriteLine("Введите количество строк в массиве: ");
+               int N = int.Parse(Console.ReadLine());
+               Task4 t = new Task4(N);
+               Console.WriteLine("Получившийся массив массивов:\n{0}", t.Show());
+               Console.WriteLine("Массив сумм элементов: {0}", t.ShowNewArr());
+               Console.WriteLine("Максимальный элемент: {0}", t.Max);
+           }
+           catch(System.FormatException)
+           {
+               Console.WriteLine("Ввели что-то не то");
+           }
+       }
+   }
+}
